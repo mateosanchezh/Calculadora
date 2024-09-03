@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Calculadora</title> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="calculadora">
+        <div class="container">
+            <table>
+                <!-- Fila para el campo de resultado -->
+                <tr>
+                    <td colspan="4"> 
+                        <input type="text" readonly id="resultado"> 
+                    </td>
+                </tr>
+               
+                <!-- Fila para los botones de operaciones y el botón de limpiar -->
+                <tr>
+                    <td><button type="button" id="clear" class="operacion" onclick="limpiar()">C</button></td> 
+                    <td><button type="button" id="dividir" class="operacion" onclick="insertar('/')">/</button></td> 
+                    <td><button type="button" id="multiplicar" class="operacion" onclick="insertar('*')">X</button></td> 
+                    <td rowspan="2"><button type="button" id="restar" class="operacion" onclick="insertar('-')">-</button></td> 
+                </tr>
+                
+                <!-- Fila para los números 1, 2, 3 -->
+                <tr>
+                    <td><button type="button" onclick="insertar('1')">1</button></td> 
+                    <td><button type="button" onclick="insertar('2')">2</button></td> 
+                    <td><button type="button" onclick="insertar('3')">3</button></td> 
+                </tr>
+                
+                <!-- Fila para los números 4, 5, 6 y el operador + -->
+                <tr>
+                    <td><button type="button" onclick="insertar('4')">4</button></td> 
+                    <td><button type="button" onclick="insertar('5')">5</button></td> 
+                    <td><button type="button" onclick="insertar('6')">6</button></td> 
+                    <td rowspan="2"><button type="button" id="sumar" class="operacion" onclick="insertar('+')">+</button></td> 
+                </tr>
+                
+                <!-- Fila para los números 7, 8, 9 -->
+                <tr>
+                    <td><button type="button" onclick="insertar('7')">7</button></td> 
+                    <td><button type="button" onclick="insertar('8')">8</button></td> 
+                    <td><button type="button" onclick="insertar('9')">9</button></td> 
+                </tr>
+              
+                <!-- Fila para el número 0 y el botón de igual -->
+                <tr>
+                    <td colspan="2"><button type="button" onclick="insertar('0')">0</button></td> 
+                    <td colspan="2"><button type="button" id="igual" class="operacion" onclick="calcular()">=</button></td> 
+                </tr>
+            </table>
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
