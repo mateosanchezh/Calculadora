@@ -25,5 +25,5 @@ Para ver y utilizar la calculadora, sigue estos pasos:
 2. Abre el archivo `index.html` en tu navegador web.
 
 ```bash
-git clone [https://github.com/tuusuario/calculadora-simple.git](https://github.com/mateosanchezh/Calculadora)
+git clone https://github.com/mateosanchezh/Calculadora
 cd calculadora
